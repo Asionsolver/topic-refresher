@@ -37,55 +37,45 @@ const students = [
   },
 ];
 
-
 /**
-* 1. Easily Traverse
-* 2. Filter
-* 3. Delete (medium)
-* 4. Update (medium)
-* 5. Create a new one (easy)
-*/
-
+ * 1. Easily Traverse
+ * 2. Filter
+ * 3. Delete (medium)
+ * 4. Update (medium)
+ * 5. Create a new one (easy)
+ */
 
 // ! create a new student
 students.push({
   id: uuidv4(),
   name: "jane",
   age: 22,
-  email: "jane22@gmail.com",	
+  email: "jane22@gmail.com",
 });
-
-
-
 
 // ! update a student
 
 // 1st Step:
-const idToUpdate = "8685373a-3edf-44b8-9ebc-2bea8f99368c";  
+const idToUpdate = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
 
 // 2nd Step:
 const updateStudent = {
-    name: "ashis",
-    age: 26,
-    email: "ashis26@gmail.com",
-}
+  name: "ashis",
+  age: 26,
+  email: "ashis26@gmail.com",
+};
 
 // 3rd Step:(option 1)
-
-
 
 // find object
 // let updatedObj = students.find((student) => student.id === idToUpdate);
 // console.log(updatedObj);
-
-
 
 // subOption 1: (manually update)
 
 // updatedObj.name = updateStudent.name;
 // updatedObj.age = updateStudent.age;
 // updatedObj.email = updateStudent.email;
-
 
 // subOption 2: (recommended way to update)
 
@@ -94,9 +84,7 @@ const updateStudent = {
 //     ...updateStudent,
 // }
 
-
 // 3rd Step: (option 2)
-
 
 // find index
 const index = students.findIndex((student) => student.id === idToUpdate);
@@ -112,21 +100,100 @@ const index = students.findIndex((student) => student.id === idToUpdate);
 // subOption 2:(recommended)
 
 students[index] = {
-    ...students[index],
-    ...updateStudent,
-}
+  ...students[index],
+  ...updateStudent,
+};
+
+console.log('Updated Students:',students);
 
 // delete a student
 
 // 1st Step:
 const idToDelete = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
+// students.splice(idToDelete, 1);
+students.splice(
+  students.findIndex((student) => student.id === idToDelete),
+  1
+);
+
+console.log('Deleted Students:',students);
+
+// ! filter students
+
+const filteredStudents = students.filter((student) => student.age > 20);
+console.log('Filtered Students:',filteredStudents);
 
 
+// ! traverse students
+
+// using for loop
+// for (let i = 0; i < students.length; i++) {
+//     console.log(students[i]);
+// }
+
+// using forEach
+// students.forEach((student) => {
+//     console.log(student);
+// });
+
+// using for of
+// for (const student of students) {
+//     console.log(student);
+// }
 
 
+// using for in
+// for (const key in students) {
+//     console.log(students[key]);
+// }
+
+// using map
+// students.map((student) => {
+//     console.log(student);
+// });
+
+// using while
+// let i = 0;
+// while (i < students.length) {
+//     console.log(students[i]);
+//     i++;
+// }
+
+// using do while
+// let i = 0;
+// do {
+//     console.log(students[i]);
+//     i++;
+// } while (i < students.length);
 
 
+// using reduce
+// students.reduce((acc, student) => {
+//     console.log(student);
+// }, 0);
 
 
+// using every
+// students.every((student) => {
+//     console.log(student);
+//     return true;
+// });
 
-console.log(students);
+// using some
+// students.some((student) => {
+//     console.log(student);
+//     return true;
+// });
+
+// using find
+// students.find((student) => {
+//     console.log(student);
+//     return true;
+// });
+
+// using findIndex
+// students.findIndex((student) => {
+//     console.log(student);
+//     return true;
+// });
+
