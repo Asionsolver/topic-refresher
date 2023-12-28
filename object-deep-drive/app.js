@@ -212,6 +212,12 @@ const students = {
     age: 23,
     email: "mike23@gmail.com",
   },
+  'f85d18d9-fd01-45b5-8025-ad6c25e5fd24': {
+    id: 'f85d18d9-fd01-45b5-8025-ad6c25e5fd24',
+    name: 'Notion',
+    age: 19,
+    email: 'notion19@gmail.com'
+  }
 };
 
 /**
@@ -221,3 +227,32 @@ const students = {
  * 4. Update (medium)
  * 5. Create a new one (easy)
  */
+
+
+// ! create a new student
+
+const newStudent = {
+  id: uuidv4(),
+  name: "Toplie",
+  age: 27,
+  email: "toplie27@gmail.com",
+};
+
+students[newStudent.id] = newStudent;
+
+// ! update a student
+
+// 1st Step:
+
+const matchId ='f85d18d9-fd01-45b5-8025-ad6c25e5fd24';
+const updateStudent = {
+  name: "Jonas",
+  email: "jonas22@gmail.com",
+};
+
+students[matchId] = {
+  ...students[matchId], // previous data save
+  ...updateStudent, // new data add
+};
+
+console.log(students);
