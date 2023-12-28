@@ -16,26 +16,26 @@ function uuidv4() {
   });
 }
 
-const students = [
-  {
-    id: "9e7ca0d8-4dbd-484e-9286-6ae8770077cb",
-    name: "john",
-    age: 20,
-    email: "john20@gmail.com",
-  },
-  {
-    id: "8685373a-3edf-44b8-9ebc-2bea8f99368c",
-    name: "asid",
-    age: 25,
-    email: "asid25@gmail.com",
-  },
-  {
-    id: "740c27f5-4808-4650-bf99-595e189bf6b5",
-    name: "mike",
-    age: 23,
-    email: "mike23@gmail.com",
-  },
-];
+// const students = [
+//   {
+//     id: "9e7ca0d8-4dbd-484e-9286-6ae8770077cb",
+//     name: "john",
+//     age: 20,
+//     email: "john20@gmail.com",
+//   },
+// {
+//     id: "8685373a-3edf-44b8-9ebc-2bea8f99368c",
+//     name: "asid",
+//     age: 25,
+//     email: "asid25@gmail.com",
+//   },
+//   {
+//     id: "740c27f5-4808-4650-bf99-595e189bf6b5",
+//     name: "mike",
+//     age: 23,
+//     email: "mike23@gmail.com",
+//   },
+// ];
 
 /**
  * 1. Easily Traverse
@@ -46,24 +46,24 @@ const students = [
  */
 
 // ! create a new student
-students.push({
-  id: uuidv4(),
-  name: "jane",
-  age: 22,
-  email: "jane22@gmail.com",
-});
+// students.push({
+//   id: uuidv4(),
+//   name: "jane",
+//   age: 22,
+//   email: "jane22@gmail.com",
+// });
 
 // ! update a student
 
 // 1st Step:
-const idToUpdate = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
+// const idToUpdate = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
 
 // 2nd Step:
-const updateStudent = {
-  name: "ashis",
-  age: 26,
-  email: "ashis26@gmail.com",
-};
+// const updateStudent = {
+//   name: "ashis",
+//   age: 26,
+//   email: "ashis26@gmail.com",
+// };
 
 // 3rd Step:(option 1)
 
@@ -87,7 +87,7 @@ const updateStudent = {
 // 3rd Step: (option 2)
 
 // find index
-const index = students.findIndex((student) => student.id === idToUpdate);
+// const index = students.findIndex((student) => student.id === idToUpdate);
 // console.log(index);
 
 // subOption 1:(most of the time not recommended)
@@ -99,30 +99,29 @@ const index = students.findIndex((student) => student.id === idToUpdate);
 
 // subOption 2:(recommended)
 
-students[index] = {
-  ...students[index],
-  ...updateStudent,
-};
+// students[index] = {
+//   ...students[index],
+//   ...updateStudent,
+// };
 
-console.log('Updated Students:',students);
+// console.log('Updated Students:',students);
 
 // delete a student
 
 // 1st Step:
-const idToDelete = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
+// const idToDelete = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
 // students.splice(idToDelete, 1);
-students.splice(
-  students.findIndex((student) => student.id === idToDelete),
-  1
-);
+// students.splice(
+//   students.findIndex((student) => student.id === idToDelete),
+//   1
+// );
 
-console.log('Deleted Students:',students);
+// console.log('Deleted Students:',students);
 
 // ! filter students
 
-const filteredStudents = students.filter((student) => student.age > 20);
-console.log('Filtered Students:',filteredStudents);
-
+// const filteredStudents = students.filter((student) => student.age > 20);
+// console.log('Filtered Students:',filteredStudents);
 
 // ! traverse students
 
@@ -140,7 +139,6 @@ console.log('Filtered Students:',filteredStudents);
 // for (const student of students) {
 //     console.log(student);
 // }
-
 
 // using for in
 // for (const key in students) {
@@ -166,12 +164,10 @@ console.log('Filtered Students:',filteredStudents);
 //     i++;
 // } while (i < students.length);
 
-
 // using reduce
 // students.reduce((acc, student) => {
 //     console.log(student);
 // }, 0);
-
 
 // using every
 // students.every((student) => {
@@ -197,3 +193,31 @@ console.log('Filtered Students:',filteredStudents);
 //     return true;
 // });
 
+const students = {
+  "9e7ca0d8-4dbd-484e-9286-6ae8770077cb": {
+    id: "9e7ca0d8-4dbd-484e-9286-6ae8770077cb",
+    name: "john",
+    age: 20,
+    email: "john20@gmail.com",
+  },
+  "8685373a-3edf-44b8-9ebc-2bea8f99368c": {
+    id: "8685373a-3edf-44b8-9ebc-2bea8f99368c",
+    name: "asid",
+    age: 25,
+    email: "asid25@gmail.com",
+  },
+  "740c27f5-4808-4650-bf99-595e189bf6b5": {
+    id: "740c27f5-4808-4650-bf99-595e189bf6b5",
+    name: "mike",
+    age: 23,
+    email: "mike23@gmail.com",
+  },
+};
+
+/**
+ * 1. Easily Traverse
+ * 2. Filter
+ * 3. Delete (medium)
+ * 4. Update (medium)
+ * 5. Create a new one (easy)
+ */
