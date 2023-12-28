@@ -196,19 +196,19 @@ function uuidv4() {
 const students = {
   "9e7ca0d8-4dbd-484e-9286-6ae8770077cb": {
     id: "9e7ca0d8-4dbd-484e-9286-6ae8770077cb",
-    name: "john",
+    name: "John",
     age: 20,
     email: "john20@gmail.com",
   },
   "8685373a-3edf-44b8-9ebc-2bea8f99368c": {
     id: "8685373a-3edf-44b8-9ebc-2bea8f99368c",
-    name: "asid",
+    name: "Nairobi",
     age: 25,
-    email: "asid25@gmail.com",
+    email: "nairobi@gmail.com",
   },
   "740c27f5-4808-4650-bf99-595e189bf6b5": {
     id: "740c27f5-4808-4650-bf99-595e189bf6b5",
-    name: "mike",
+    name: "Mike",
     age: 23,
     email: "mike23@gmail.com",
   },
@@ -222,6 +222,7 @@ const students = {
 
 /**
  * 1. Easily Traverse
+ * 1.1 Get any thing if you know the id
  * 2. Filter
  * 3. Delete (medium)
  * 4. Update (medium)
@@ -242,7 +243,7 @@ students[newStudent.id] = newStudent;
 
 // ! update a student
 
-// 1st Step:
+
 
 const matchId ='f85d18d9-fd01-45b5-8025-ad6c25e5fd24';
 const updateStudent = {
@@ -255,4 +256,41 @@ students[matchId] = {
   ...updateStudent, // new data add
 };
 
-console.log(students);
+
+// ! delete a student
+// delete students[matchId];
+// console.log(students);
+
+// ! filter students
+
+
+// ! traverse students
+
+// using for in
+// for (const key in students) {
+//   console.log(students[key].name);
+  // console.log(key);
+// }
+
+
+// console.log(Object.keys(students)); // return an array of keys 
+
+// ! using forEach and Object.keys
+// Object.keys(students).forEach((key) => {
+//   const student = students[key];
+//   console.log('Student name is',student.name, 'age is', student.age);
+// });
+
+// ! using forEach and Object.values
+
+Object.values(students).forEach((student) => {
+  console.log('Student name is',student.name, 'age is', student.age);
+}
+);
+
+
+// * 1.1 Get any thing if you know the id
+
+// const idToFind = "8685373a-3edf-44b8-9ebc-2bea8f99368c";
+
+// console.log(students[idToFind]);
