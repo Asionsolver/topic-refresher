@@ -1,5 +1,5 @@
 const array = [];
-const object = {};
+const objects = {};
 
 for(i = 0; i < 5000000; i++) {
     const data = {
@@ -8,7 +8,7 @@ for(i = 0; i < 5000000; i++) {
     };
 
     array.push(data);
-    object[i] = data;
+    objects[i] = data;
 }
 
 // console.time('array');
@@ -23,7 +23,45 @@ for(i = 0; i < 5000000; i++) {
 
 
 
-// console.time('object');
-// const dataReplace2 = object[id];
+// console.time('objects');
+// const dataReplace2 = objects[id];
 // dataReplace2.values = 'test';
-// console.timeEnd('object');
+// console.timeEnd('objects');
+
+
+// console.time('array');
+
+// array.unshift({
+//     id: 5000000,
+//     value: 5000000,
+// });
+
+// console.timeEnd('array');
+
+// console.time(objects);
+
+// objects[5000000] = {
+//     id: 5000000,
+//     value: 5000000,
+// };
+
+// console.timeEnd(objects);
+
+
+console.time('array');
+
+const index = array.findIndex((item) => {
+    return item.id === 4521845;
+});
+
+array.splice(index, 1);
+
+console.timeEnd('array');
+
+
+
+console.time(objects);
+
+delete objects[4521845];
+
+console.timeEnd(objects);
