@@ -76,22 +76,22 @@ function work(name, job){
 // - Eat -> name, 'Dinner'
 // - Sleep -> name
 
-function studentDailyLife(name){
-    awake(name, '8:00 AM');
-    eat(name, 'Breakfast');
-    walk(name, 'School');
-    eat(name, 'Lunch');
-    study(name, 'Math');
-    walk(name, 'home');
-    eat(name, 'Dinner');
-    study(name, 'Design');
-    sleep(name);
-}
+// function studentDailyLife(name){
+//     awake(name, '8:00 AM');
+//     eat(name, 'Breakfast');
+//     walk(name, 'School');
+//     eat(name, 'Lunch');
+//     study(name, 'Math');
+//     walk(name, 'home');
+//     eat(name, 'Dinner');
+//     study(name, 'Design');
+//     sleep(name);
+// }
 
-console.log('------------------------------------');
-studentDailyLife('Ashis');
-console.log('------------------------------------');
-studentDailyLife('Asis');
+// console.log('------------------------------------');
+// studentDailyLife('Ashis');
+// console.log('------------------------------------');
+// studentDailyLife('Asis');
 
 
 
@@ -107,20 +107,20 @@ studentDailyLife('Asis');
 // - Eat -> name, 'Dinner'
 // - Sleep -> name
 
-function jobHolderDailyLife(name, job){
-    awake(name, '8:00 AM');
-    eat(name, 'Breakfast');
-    walk(name, 'Office');
-    work(name, job);
-    eat(name, 'Lunch');
-    walk(name, 'home');
-    eat(name, 'Dinner');
-    sleep(name);
-}
+// function jobHolderDailyLife(name, job){
+//     awake(name, '8:00 AM');
+//     eat(name, 'Breakfast');
+//     walk(name, 'Office');
+//     work(name, job);
+//     eat(name, 'Lunch');
+//     walk(name, 'home');
+//     eat(name, 'Dinner');
+//     sleep(name);
+// }
 
-jobHolderDailyLife('Ashis', 'Frontend Developer');
-console.log('------------------------------------');
-jobHolderDailyLife('Asis', 'Backend Developer');
+// jobHolderDailyLife('Ashis', 'Frontend Developer');
+// console.log('------------------------------------');
+// jobHolderDailyLife('Asis', 'Backend Developer');
 
 
 

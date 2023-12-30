@@ -1,4 +1,4 @@
-// const arr = [1, 2, 3, "text", NaN, 4, "", 5, 6, 7, false, 8, true, 9];
+const arr = [1, 2, 3, "text", NaN, 4, "", 5, 6, 7, false, 8, true, 9];
 
 // const result = arr.map((item) => item * 2);
 // console.log(result);
@@ -16,8 +16,8 @@
 // });
 // console.log(result4);
 
-// const result5 = arr.filter((item) => item)
-// console.log(result5)
+const result5 = arr.filter((item) => item)
+console.log(result5)
 
 // const result6 = arr.filter((item) => !item)
 // console.log(result6)
@@ -53,24 +53,24 @@
  * Reduce -> know one knows(only the developer knows)(all possible value)
  */
 
-const array = []
+// const array = []
 
-for (let i = 0; i < 7000000; i++) {
-  array.push(i)
-}
+// for (let i = 0; i < 7000000; i++) {
+//   array.push(i)
+// }
 
-console.time('not optimized')
-array.filter(item => item % 2 === 0).map(item => item * 2)
+// console.time('not optimized')
+// array.filter(item => item % 2 === 0).map(item => item * 2)
 
-console.timeEnd('not optimized')
+// console.timeEnd('not optimized')
 
-console.time('optimized')
-array.reduce((acc, item) => {
-  if (item % 2 === 0) {
-    acc.push(item * 2)
-  }
-  return acc
-}, [])
+// console.time('optimized')
+// array.reduce((acc, item) => {
+//   if (item % 2 === 0) {
+//     acc.push(item * 2)
+//   }
+//   return acc
+// }, [])
 
 console.timeEnd('optimized')
 
